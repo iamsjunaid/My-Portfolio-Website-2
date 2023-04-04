@@ -9,7 +9,7 @@
     font-family: 'Poppins', sans-serif;
   }
   
-  .header {
+  header {
     padding: 0 5em 0 5em;
     font-weight: 700;
     background-color: white;
@@ -28,4 +28,168 @@
   
   .bar-menu {
     display: none;
+  }
+
+  main {
+    position: absolute;
+    width: 100%;
+    margin-top: 5.5em;
+    overflow: hidden;
+  }
+
+  .headline {
+    background-image: url('./images/header-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: contain;
+    border-bottom-left-radius: 100px;
+    padding: 15em 20em;
+  }
+
+  .title {
+    font-weight: 800;
+    font-size: 3em;
+    line-height: 1.25em;
+  }
+  
+  .subtitle {
+    font-size: 1.35em;
+    line-height: 1.75em;
+  }
+
+  .connect {
+    color: blue;
+    font-weight: 500;
+    font-size: 1em;
+    border: none;
+    background: transparent;
+  }
+  
+  .social-icons {
+    list-style-type: none;
+  }
+  
+  .icon {
+    font-size: 1.25em;
+    color: #505f79;
+    padding-right: 1.25em;
+    font-weight: 500;
+  }
+
+  .project-section {
+    padding: 8.875em;
+  }
+
+  .project-card {
+    border-radius: 0.375em;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid transparent;
+  }
+
+
+  .project-card-even {
+    display: flex;
+    flex-direction: row;
+    min-width: 0;
+    background-color: #fff;
+    border-radius: 0.375em;
+    border: 1px solid transparent;
+    padding: 1rem 0.5rem;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  #card1,#card2,#card3,#card4{
+    flex-direction: row;
+  }
+
+  #card2, #card4 {
+    flex-direction: row-reverse;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  
+  .mainlist {
+    color: #344563;
+    font-size: 1.125em;
+  }
+  
+  .sublist {
+    color: #6b778c;
+    font-size: 1.125em;
+  }
+
+  .sublist::before {
+    content: "•";
+    margin: 0 8px;
+    width: 8px;
+    height: 8px;
+    color: #6b778c;
+  }
+  
+  .badge {
+    background-color: #ebebff;
+  }
+
+  #about-section {
+    background-color: white;
+    border-top-right-radius: 100px;
+  }
+  
+  #about-section > div {
+    width: 85vw;
+    margin: 0 auto;
+    padding: 10em 7em;
+  }
+
+  .about-content-left {
+    width: 30vw;
+    padding-right: 2em;
+  }
+  
+  .about-content-right {
+    width: 45vw;
+  }
+
+  .about-title {
+    width: 10vw;
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 1em;
+  }
+  
+  .about-subtitle {
+    font-size: 1em;
+    width: 28vw;
+  } 
+  
+  .item {
+    font-size: 1.35em;
+  }
+  
+  .subitem-list {
+    display: flex;
+    list-style-type: none;
+  }
+  
+  .subitem-list li {
+    font-size: 1rem;
+    background: #f7f7f9;
+    border-radius: 0.5em;
+    padding: 0.8em 1.25em;
+    margin-right: 1em;
+    width: 8em;
+    flex-direction: column;
+  }
+  
+  .subitem-list img {
+    width: 3em;
   }
