@@ -91,7 +91,6 @@ main {
   border: 1px solid transparent;
 }
 
-
 .project-card-even {
   display: flex;
   flex-direction: row;
@@ -148,7 +147,7 @@ main {
   border-top-right-radius: 100px;
 }
 
-#about-section>div {
+#about-section > div {
   width: 85vw;
   margin: 0 auto;
   padding: 10em 7em;
@@ -207,7 +206,7 @@ main {
   background-position: center;
 }
 
-#contact>div {
+#contact > div {
   width: 35vw;
   margin: 0 auto;
   padding: 10em 0;
@@ -300,11 +299,6 @@ main {
   .project-section {
     padding-left: 2em;
     padding-right: 1.5em;
-  }
-
-  .project-card {
-    flex-direction: column;
-    padding: 1em;
   }
 
   .project-card {

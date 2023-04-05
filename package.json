@@ -1,16 +1,24 @@
 {
-  "name": "my-portfolio-website",
+  "name": "try-bootstrap",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KanzaTahreem/Try-Bootstrap.git"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KanzaTahreem/Try-Bootstrap/issues"
+  },
+  "homepage": "https://github.com/KanzaTahreem/Try-Bootstrap#readme",
   "devDependencies": {
-    "hint": "^7.1.5",
+    "hint": "^7.1.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
     "stylelint-csstree-validator": "^1.9.0",
