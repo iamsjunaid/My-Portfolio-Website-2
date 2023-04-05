@@ -255,3 +255,169 @@ main {
   background-color: #0d6efd;
   color: white;
 }
+
+@media (max-width: 1199.98px) {
+  .header {
+    padding: 0 2em;
+    position: inherit;
+  }
+
+  .bar-menu {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.25em;
+    color: #0d6efd;
+  }
+
+  #navbar-menu {
+    display: none;
+  }
+
+  main {
+    margin-top: 0;
+    position: inherit;
+  }
+
+  .headline {
+    background-image: url('./images/header-shapes-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: contain;
+    padding: 15em 3em;
+  }
+
+  .title {
+    font-size: 2.5em;
+    width: 55vw;
+  }
+
+  .subtitle {
+    font-size: 1.25em;
+    color: #344563;
+  }
+
+  .project-section {
+    padding-left: 2em;
+    padding-right: 1.5em;
+  }
+
+  .project-card {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .project-card {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .mainlist {
+    color: #344563;
+    font-size: 0.925em;
+  }
+
+  .sublist {
+    color: #6b778c;
+    font-size: 0.925em;
+  }
+
+  .sublist::before {
+    content: "•";
+    margin: 0 8px;
+    width: 8px;
+    height: 8px;
+    color: #6b778c;
+  }
+
+  .card-text {
+    font-size: 0.925em;
+  }
+
+  #card1,
+  #card2,
+  #card3,
+  #card4 {
+    flex-direction: column;
+  }
+
+  #about-content {
+    flex-direction: column;
+  }
+
+  #about-section > div {
+    flex-direction: column;
+    padding: 10em 2em;
+    width: 100vw;
+  }
+
+  .about-content-left,
+  .about-content-right {
+    width: 100%;
+  }
+
+  .about-title {
+    line-height: 1.25em;
+  }
+
+  .about-subtitle {
+    width: 100%;
+  }
+
+  .subitem-list {
+    flex-direction: column;
+  }
+
+  #list-item1,
+  #list-item2,
+  #list-item3 {
+    align-items: center;
+  }
+
+  #contact {
+    background-image: url('./images/contact-form-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+
+  #contact > div {
+    width: 100%;
+    padding: 10em 3em;
+  }
+
+  .subitem-list img {
+    margin-right: 1.5em;
+  }
+
+  .form-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #text,
+  #email,
+  #comment {
+    border-radius: 0.5em;
+  }
+
+  #button {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .headline {
+    background-image: url('./images/header-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: contain;
+  }
+}
