@@ -1,0 +1,417 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.body {
+  background-color: #e5e5e5;
+  font-family: 'Poppins', sans-serif;
+}
+
+header {
+  padding: 0 5em 0 5em;
+  font-weight: 700;
+  background-color: white;
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo {
+  font-size: 1.125em;
+}
+
+.menu {
+  font-size: 0.9375em;
+}
+
+.bar-menu {
+  display: none;
+}
+
+main {
+  position: absolute;
+  width: 100%;
+  margin-top: 5.5em;
+  overflow: hidden;
+}
+
+.headline {
+  background-image: url('./images/header-bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: contain;
+  border-bottom-left-radius: 100px;
+  padding: 15em 20em;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 3em;
+  line-height: 1.25em;
+}
+
+.subtitle {
+  font-size: 1.35em;
+  line-height: 1.75em;
+}
+
+.connect {
+  color: blue;
+  font-weight: 500;
+  font-size: 1em;
+  border: none;
+  background: transparent;
+}
+
+.social-icons {
+  list-style-type: none;
+}
+
+.icon {
+  font-size: 1.25em;
+  color: #505f79;
+  padding-right: 1.25em;
+  font-weight: 500;
+}
+
+.project-section {
+  padding: 8.875em;
+}
+
+.project-card {
+  border-radius: 0.375em;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  background-color: #fff;
+  border: 1px solid transparent;
+}
+
+.project-card-even {
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  background-color: #fff;
+  border-radius: 0.375em;
+  border: 1px solid transparent;
+  padding: 1rem 0.5rem;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+
+#card1,
+#card2,
+#card3,
+#card4 {
+  flex-direction: row;
+}
+
+#card2,
+#card4 {
+  flex-direction: row-reverse;
+}
+
+.card-title {
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.mainlist {
+  color: #344563;
+  font-size: 1.125em;
+}
+
+.sublist {
+  color: #6b778c;
+  font-size: 1.125em;
+}
+
+.sublist::before {
+  content: "•";
+  margin: 0 8px;
+  width: 8px;
+  height: 8px;
+  color: #6b778c;
+}
+
+.badge {
+  background-color: #ebebff;
+}
+
+#about-section {
+  background-color: white;
+  border-top-right-radius: 100px;
+}
+
+#about-section > div {
+  width: 85vw;
+  margin: 0 auto;
+  padding: 10em 7em;
+}
+
+.about-content-left {
+  width: 30vw;
+  padding-right: 2em;
+}
+
+.about-content-right {
+  width: 45vw;
+}
+
+.about-title {
+  width: 10vw;
+  font-weight: 700;
+  font-size: 3em;
+  line-height: 1em;
+}
+
+.about-subtitle {
+  font-size: 1em;
+  width: 28vw;
+}
+
+.item {
+  font-size: 1.35em;
+}
+
+.subitem-list {
+  display: flex;
+  list-style-type: none;
+}
+
+.subitem-list li {
+  font-size: 1rem;
+  background: #f7f7f9;
+  border-radius: 0.5em;
+  padding: 0.8em 1.25em;
+  margin-right: 1em;
+  width: 8em;
+  flex-direction: column;
+}
+
+.subitem-list img {
+  width: 3em;
+}
+
+#contact {
+  background-color: #6070ff;
+  border-top-left-radius: 100px;
+  background-image: url('./images/contact-form-background.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#contact > div {
+  width: 35vw;
+  margin: 0 auto;
+  padding: 10em 0;
+}
+
+.contact-title {
+  font-size: 3em;
+  font-weight: 600;
+  color: white;
+}
+
+.contact-subtitle {
+  font-size: 1.25em;
+  color: #ebebff;
+}
+
+.form-1 {
+  width: 30vw;
+  margin: 0 auto;
+}
+
+#text,
+#email {
+  height: 2.93em;
+  font-size: 1.0625em;
+  border: 1px solid #cfd8dc;
+  font-weight: 400;
+  line-height: 1.25em;
+  border-radius: 0.5em;
+}
+
+#comment {
+  height: 10.625em;
+  font-size: 1.0625em;
+  font-weight: 400;
+  line-height: 1.25em;
+  border-radius: 0.5em;
+}
+
+#button {
+  background-color: white;
+}
+
+#button:hover {
+  background-color: #0d6efd;
+  color: white;
+}
+
+@media (max-width: 1199.98px) {
+  .header {
+    padding: 0 2em;
+    position: inherit;
+  }
+
+  .bar-menu {
+    display: flex;
+    list-style-type: none;
+    font-size: 1.25em;
+    color: #0d6efd;
+  }
+
+  #navbar-menu {
+    display: none;
+  }
+
+  main {
+    margin-top: 0;
+    position: inherit;
+  }
+
+  .headline {
+    background-image: url('./images/header-shapes-mobile.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: contain;
+    padding: 15em 3em;
+  }
+
+  .title {
+    font-size: 2.5em;
+    width: 55vw;
+  }
+
+  .subtitle {
+    font-size: 1.25em;
+    color: #344563;
+  }
+
+  .project-section {
+    padding-left: 2em;
+    padding-right: 1.5em;
+  }
+
+  .project-card {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 2rem;
+  }
+
+  .mainlist {
+    color: #344563;
+    font-size: 0.925em;
+  }
+
+  .sublist {
+    color: #6b778c;
+    font-size: 0.925em;
+  }
+
+  .sublist::before {
+    content: "•";
+    margin: 0 8px;
+    width: 8px;
+    height: 8px;
+    color: #6b778c;
+  }
+
+  .card-text {
+    font-size: 0.925em;
+  }
+
+  #card1,
+  #card2,
+  #card3,
+  #card4 {
+    flex-direction: column;
+  }
+
+  #about-content {
+    flex-direction: column;
+  }
+
+  #about-section > div {
+    flex-direction: column;
+    padding: 10em 2em;
+    width: 100vw;
+  }
+
+  .about-content-left,
+  .about-content-right {
+    width: 100%;
+  }
+
+  .about-title {
+    line-height: 1.25em;
+  }
+
+  .about-subtitle {
+    width: 100%;
+  }
+
+  .subitem-list {
+    flex-direction: column;
+  }
+
+  #list-item1,
+  #list-item2,
+  #list-item3 {
+    align-items: center;
+  }
+
+  #contact {
+    background-image: url('./images/contact-form-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right;
+  }
+
+  #contact > div {
+    width: 100%;
+    padding: 10em 3em;
+  }
+
+  .subitem-list img {
+    margin-right: 1.5em;
+  }
+
+  .form-1 {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #text,
+  #email,
+  #comment {
+    border-radius: 0.5em;
+  }
+
+  #button {
+    align-self: flex-start;
+  }
+}
+
+@media (min-width: 991.98px) {
+  .headline {
+    background-image: url('./images/header-bg.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    background-size: contain;
+  }
+}
