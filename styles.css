@@ -10,7 +10,6 @@
 }
 
 header {
-  padding: 0 5em 0 5em;
   font-weight: 700;
   background-color: white;
   position: fixed;
@@ -257,7 +256,8 @@ main {
 
 @media (max-width: 1199.98px) {
   .header {
-    padding: 0 2em;
+    /* padding: 0 2em; */
+    padding: none;
     position: inherit;
   }
 

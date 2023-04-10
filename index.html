@@ -19,12 +19,13 @@
         <div>
           <a href="#" class="navbar-brand logo text-primary">Junaid</a>
         </div>
-        <ul class="bar-menu m-0 p-0">
-          <li><i class="fa-solid fa-bars"></i></li>
+        <ul class="bar-menu m-0 p-0" >
+          <li><i id ="horizontal-bars" class="fa-solid fa-bars" onclick="menuClick()"></i></li>
+          <li><i id="cross" class="fa-solid fa-x" onclick="crossClick()"></i></li>
         </ul>
         <ul class="nav nav-pills" id="navbar-menu">
           <li class="nav-item menu">
-            <a class="nav-link active" aria-current="page" href="#Portfolio">Portfolio</a>
+            <a class="nav-link" aria-current="page" href="#Portfolio">Portfolio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#About">About</a>
@@ -318,6 +319,7 @@
 
 
   </div>
-</body>
+  <script src="index.js"></script>
+  </body>
 
 </html>
