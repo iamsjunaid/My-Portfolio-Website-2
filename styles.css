@@ -256,11 +256,10 @@ main {
 }
 
 @media (max-width: 1199.98px) {
-  
-  .ham-menu{
+  .ham-menu {
     display: none;
   }
-  
+
   .header {
     /* padding: 0 2em; */
     padding: none;
