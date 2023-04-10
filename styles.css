@@ -256,7 +256,6 @@ main {
 }
 
 @media (max-width: 1199.98px) {
-  
   .header {
     padding: none;
     position: inherit;
@@ -416,10 +415,9 @@ main {
     background-size: contain;
   }
 
-  .ham-menu{
+  .ham-menu {
     display: none;
   }
-
 }
 
 @media screen and (max-width: 991.98px) {
