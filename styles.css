@@ -256,9 +256,9 @@ main {
 }
 
 @media (max-width: 1199.98px) {
-  .ham-menu {
+  /* .ham-menu{
     display: none;
-  }
+  } */
 
   .header {
     /* padding: 0 2em; */
@@ -418,6 +418,10 @@ main {
     background-repeat: no-repeat;
     background-color: white;
     background-size: contain;
+  }
+
+  .ham-menu {
+    display: none;
   }
 }
 
