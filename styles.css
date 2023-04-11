@@ -257,7 +257,7 @@ main {
 
 @media (max-width: 1199.98px) {
   .header {
-    padding: none;
+    /* padding: none; */
     position: inherit;
   }
 
