@@ -10,7 +10,6 @@
 }
 
 header {
-  padding: 0 5em 0 5em;
   font-weight: 700;
   background-color: white;
   position: fixed;
@@ -26,7 +25,8 @@ header {
   font-size: 0.9375em;
 }
 
-.bar-menu {
+.bar-menu,
+.mobile-menu {
   display: none;
 }
 
@@ -131,7 +131,7 @@ main {
 }
 
 .sublist::before {
-  content: "•";
+  content: '•';
   margin: 0 8px;
   width: 8px;
   height: 8px;
@@ -257,7 +257,7 @@ main {
 
 @media (max-width: 1199.98px) {
   .header {
-    padding: 0 2em;
+    padding: none;
     position: inherit;
   }
 
@@ -322,7 +322,7 @@ main {
   }
 
   .sublist::before {
-    content: "•";
+    content: '•';
     margin: 0 8px;
     width: 8px;
     height: 8px;
@@ -413,5 +413,70 @@ main {
     background-repeat: no-repeat;
     background-color: white;
     background-size: contain;
+  }
+
+  .ham-menu {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .mobile-menu {
+    display: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #6070ff;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 5rem 3rem;
+    background-color: #6070ff;
+    opacity: 0.9;
+  }
+
+  .active {
+    display: flex;
+  }
+
+  .mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 2rem;
+    list-style-type: none;
+    width: 100%;
+  }
+
+  .mobile-menu ul li {
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
+  .mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .close-icon {
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .ham-menu {
+    color: #6070ff;
+    font-size: 1.5rem;
   }
 }
