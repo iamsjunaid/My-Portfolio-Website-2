@@ -3,7 +3,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const closeMenu = document.querySelector('.close-icon');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 const email = document.querySelector('.email');
-const form = document.querySelector('.form-1')
+const form = document.querySelector('.form-1');
 
 hamMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
