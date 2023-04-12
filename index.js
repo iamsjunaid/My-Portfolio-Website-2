@@ -76,7 +76,7 @@ function displayCards() {
         <ul class="list-inline p-1">
           ${project.techs.map((tech) => `<li class="list-inline-item mainlist">${tech}</li>`).join('')}
         </ul>
-        <button type="button" class="project-btn button">
+        <button type="button" class="btn btn-outline-primary align-self-start">
           See Project
         </button>
       </div>
