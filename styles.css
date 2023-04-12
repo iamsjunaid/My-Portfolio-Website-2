@@ -312,6 +312,10 @@ main {
     padding: 1em;
   }
 
+  .inner-card {
+    padding: 0px !important;
+  }
+
   .card-title {
     font-weight: 700;
     font-size: 2rem;
@@ -339,10 +343,14 @@ main {
     font-size: 0.925em;
   }
 
-  #card1,
-  #card2,
-  #card3,
-  #card4 {
+  #portfolio-img{
+    width: 100%;
+  }
+
+  #card-0,
+  #card-1,
+  #card-2,
+  #card-3 {
     flex-direction: column;
   }
 

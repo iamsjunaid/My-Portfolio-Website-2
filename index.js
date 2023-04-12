@@ -63,9 +63,9 @@ function displayCards() {
 
   projectsDataSource.forEach((project,index) => {
     result += `<div class="card grid__item mb-5" >
-    <div class="inner-card d-flex p-5" id=${"card-"+index}>
-      <div class="portfolio-image">
-        <img
+    <div class="inner-card d-flex p-4" id=${"card-"+index}>
+      <div class="portfolio-image-container">
+        <img id="portfolio-img"
           src="${project.img}"
           alt="Project Snapshot"
         />
