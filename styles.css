@@ -103,15 +103,16 @@ main {
   overflow: hidden;
 }
 
-#card1,
-#card2,
-#card3,
-#card4 {
+#card-0,
+#card-1,
+#card-2,
+#card-3 {
   flex-direction: row;
+  gap : 2rem;
 }
 
-#card2,
-#card4 {
+#card-1,
+#card-3 {
   flex-direction: row-reverse;
 }
 
@@ -128,6 +129,10 @@ main {
 .sublist {
   color: #6b778c;
   font-size: 1.125em;
+}
+
+.list-inline {
+  gap: 0.50em;
 }
 
 .sublist::before {
@@ -181,6 +186,7 @@ main {
 .subitem-list {
   display: flex;
   list-style-type: none;
+  /* gap: 2em; */
 }
 
 .subitem-list li {

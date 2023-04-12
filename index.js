@@ -61,10 +61,10 @@ const projectsDataSource =  [
 function displayCards() {
   let result = '';
 
-  projectsDataSource.forEach((project) => {
-    result += `<div class="card grid__item mb-5">
-    <div class="inner-card d-flex p-5">
-      <div class="card-img card-1">
+  projectsDataSource.forEach((project,index) => {
+    result += `<div class="card grid__item mb-5" >
+    <div class="inner-card d-flex p-5" id=${"card-"+index}>
+      <div class="portfolio-image">
         <img
           src="${project.img}"
           alt="Project Snapshot"
@@ -73,9 +73,9 @@ function displayCards() {
       <div class="desc">
         <h2 class="card-title">${project.title}</h2>
         <p>${project.desc}</p>
-        <ul class="list-inline p-1">
-          ${project.techs.map((tech) => `<li class="list-inline-item mainlist">${tech}</li>`).join('')}
-        </ul>
+        <div class="list-inline p-1 d-flex">
+          ${project.techs.map((tech) => `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`).join('')}
+        </div>
         <button type="button" class="btn btn-outline-primary align-self-start">
           See Project
         </button>
