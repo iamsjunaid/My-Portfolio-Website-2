@@ -2,10 +2,9 @@ const hamMenu = document.querySelector('.ham-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeMenu = document.querySelector('.close-icon');
 const mobileLinks = document.querySelectorAll('.mobile-link');
-const seeProjectBtns = document.querySelectorAll('.see-project-btn')
 const gridItem = document.querySelector('.grid__item');
 
-console.log(gridItem)
+console.log(gridItem);
 
 hamMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
@@ -24,50 +23,49 @@ mobileLinks.forEach((link) => {
 //passing this data dynamically to the portfolio section
 const projectsDataSource = [
   {
-    img: "./images/Snapshoot-Portfolio.svg",
-    title: "Tonic",
-    desc: "A daily selection of privately personalized reads; no accounts or sign-ups required. ",
-    techs: ["HTML", "CSS", "JavaScript"],
-    live: "abc",
-    source: "xyz",
+    img: './images/Snapshoot-Portfolio.svg',
+    title: 'Tonic',
+    desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. ',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    live: 'abc',
+    source: 'xyz',
   },
   {
-    img: "./images/Snapshoot-Portfolio2.svg",
-    title: "Multi-Post Stories",
-    desc: "Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends. ",
-    techs: ["HTML", "CSS", "JavaScript"],
-    live: "abc",
-    source: "xyz",
+    img: './images/Snapshoot-Portfolio2.svg',
+    title: 'Multi-Post Stories',
+    desc: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends. ',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    live: 'abc',
+    source: 'xyz',
   },
   {
-    img: "./images/Snapshoot-Portfolio3.svg",
-    title: "Facebook 360",
+    img: './images/Snapshoot-Portfolio3.svg',
+    title: 'Facebook 360',
     desc: "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR. ",
-    techs: ["HTML", "CSS", "JavaScript"],
-    live: "abc",
-    source: "xyz",
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    live: 'abc',
+    source: 'xyz',
   },
   {
-    img: "./images/Snapshoot-Portfolio4.svg",
-    title: "Uber Navigation",
-    desc: "A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.",
-    techs: ["HTML", "CSS", "JavaScript"],
-    live: "abc",
-    source: "xyz",
-  }
-]
+    img: './images/Snapshoot-Portfolio4.svg',
+    title: 'Uber Navigation',
+    desc: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
+    techs: ['HTML', 'CSS', 'JavaScript'],
+    live: 'abc',
+    source: 'xyz',
+  },
+];
 
-let parser = new DOMParser
+let parser = new DOMParser();
 
-function displayCards() {
-  let result = '';
+let result = '';
 
-  projectsDataSource.forEach((project, index) => {
+projectsDataSource.forEach((project, index) => {
+  const projectElement = parser.parseFromString(projectsDataSource, 'text/html')
+    .body.firstChild;
 
-    const projectElement = parser.parseFromString(projectsDataSource, 'text/html').body.firstChild;
-
-    result += `<div class="card grid__item mb-5" >
-    <div class="inner-card d-flex p-4" id=${"card-" + index}>
+  result += `<div class="card grid__item mb-5" >
+    <div class="inner-card d-flex p-4" id=${'card-' + index}>
       <div class="portfolio-image-container">
         <img id="portfolio-img"
           src="${project.img}"
@@ -78,23 +76,26 @@ function displayCards() {
         <h2 class="card-title">${project.title}</h2>
         <p>${project.desc}</p>
         <div class="list-inline p-1 d-flex">
-          ${project.techs.map((tech) => `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`).join('')}
+          ${project.techs
+            .map(
+              (tech) =>
+                `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`
+            )
+            .join('')}
         </div>
         <button type="button" class="btn btn-outline-primary align-self-start see-project-btn" onclick="projectClick(event)">
           See Project
         </button>
       </div>
     </div>
-  </div>`
-    // console.log(projectElement)
-  });
+  </div>`;
+});
 
-  document.getElementById('Portfolio').innerHTML = result;
- 
-}
+document.getElementById('Portfolio').innerHTML = result;
 
-displayCards();
+const seeProjectBtns = document.querySelectorAll('.see-project-btn');
 
+console.log(seeProjectBtns);
 const projects = [];
 
 const projectOne = {
@@ -102,7 +103,8 @@ const projectOne = {
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   demo: '',
   source: '',
 };
@@ -114,7 +116,8 @@ const projectTwo = {
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   demo: '',
   source: '',
 };
@@ -126,7 +129,8 @@ const projectThree = {
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   demo: '',
   source: '',
 };
@@ -138,7 +142,8 @@ const projectFour = {
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   demo: '',
   source: '',
 };
@@ -150,7 +155,8 @@ const projectFive = {
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   demo: '',
   source: '',
 };
@@ -162,7 +168,8 @@ const projectSix = {
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  description:
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
   demo: '',
   source: '',
 };
@@ -172,7 +179,7 @@ projects.push(projectSix);
 function projectClick(event) {
   // const clickedId = event.target.attr('id');
 
-  console.log(event)
+  console.log(event);
 
   for (let i = 0; i < projects.length; i++) {
     if (projects[i].id === clickedId) {
@@ -191,7 +198,8 @@ function projectClick(event) {
 
       const closeIcon = document.createElement('button');
       closeIcon.className = 'closeButton';
-      closeIcon.innerHTML = '<button onclick="closeWindow()" id="closeButton" ><img src="images/closed-icon.png" alt="CloseIcon"/></i></button>';
+      closeIcon.innerHTML =
+        '<button onclick="closeWindow()" id="closeButton" ><img src="images/closed-icon.png" alt="CloseIcon"/></i></button>';
       imageContainer.appendChild(closeIcon);
 
       const img = document.createElement('img');
@@ -214,7 +222,8 @@ function projectClick(event) {
       }
 
       const p = document.createElement('p');
-      p.innerHTML = 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea';
+      p.innerHTML =
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea';
       insideContainer.appendChild(p);
 
       const link = document.createElement('div');
@@ -223,12 +232,14 @@ function projectClick(event) {
 
       const seeLive = document.createElement('button');
       seeLive.className = 'seeLive';
-      seeLive.innerHTML = '<button type="button" id="btnLive" class="btn">See Live <i class="fa fa-up-right-from-square"></i></button ';
+      seeLive.innerHTML =
+        '<button type="button" id="btnLive" class="btn">See Live <i class="fa fa-up-right-from-square"></i></button ';
       link.appendChild(seeLive);
 
       const seeSource = document.createElement('button');
       seeSource.className = 'seeSource';
-      seeSource.innerHTML = '<button type="button" id="btnSource" class="btn">See Source <i class="fa fa-github"></i></i></button ';
+      seeSource.innerHTML =
+        '<button type="button" id="btnSource" class="btn">See Source <i class="fa fa-github"></i></i></button ';
       link.appendChild(seeSource);
     }
   }
