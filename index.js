@@ -99,61 +99,62 @@ const projects = [];
 const projectOne = {
   id: 0,
   img: './images/Snapshoot-Portfolio.svg',
-  name: 'Keeping track of hundreds of components',
-  tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  demo: '',
-  source: '',
+  name: 'Tonic',
+  tech: ['Codekit', 'GitHub', 'JavaScript'],
+  description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  demo: 'abc',
+  source: 'def',
 };
 
 projects.push(projectOne);
 
 const projectTwo = {
   id: 1,
-  img: './images/popupImage.jpg',
-  name: 'Keeping track of hundreds of components',
+  img: './images/Snapshoot-Portfolio2.svg',
+  name: 'Multi-Post Stories',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  demo: '',
-  source: '',
-};
+    'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+  demo: 'abc',
+  source: 'def',
+
+  };
 
 projects.push(projectTwo);
 
 const projectThree = {
   id: 2,
-  img: './images/popupImage.jpg',
+  img: './images/Snapshoot-Portfolio3.svg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  demo: '',
-  source: '',
+  demo: 'abc',
+  source: 'def',
 };
 
 projects.push(projectThree);
 
 const projectFour = {
   id: 3,
-  img: './images/popupImage.jpg',
-  name: 'Keeping track of hundreds of components',
+  img: './images/Snapshoot-Portfolio4.svg',
+  name: 'Uber Navigation',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  demo: '',
-  source: '',
+    'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  demo: 'abc',
+  source: 'def',
 };
 
 function projectClick(event) {
   let clickedId = event.target.id;
+  // console.log(clickedId)
   header.classList.toggle('header-toggler')
 
   console.log(projects.length)
   for (let i = 0; i < projects.length; i++) {
-    console.log(projects[i].id+" "+clickedId)
-    // console.log(projects[i].id)
+    console.log(i)
+    console.log(clickedId)
     if (projects[i].id == clickedId) {
 
       const body = document.querySelector('body');
@@ -166,20 +167,33 @@ function projectClick(event) {
       popupSection.appendChild(insideContainer);
 
       const headerImageContainer = document.createElement('div')
-      const careersTitle = document.createElement('h3');
+      headerImageContainer.className = "headerImageContainer"
+      
+      const careersTitle = document.createElement('h2');
+      careersTitle.className = "card-title"
       careersTitle.innerHTML = projects[i].name;
-      insideContainer.appendChild(careersTitle);
+      headerImageContainer.appendChild(careersTitle);
+
+      const closeButton = document.createElement('div');
+      closeButton.classList = 'close-icon-popup closeButton';
+      closeButton.innerHTML = '<i class="fa-sharp fa-solid fa-xmark" onclick="closeWindow()"></i>'
+      headerImageContainer.append(closeButton);
+      
+      insideContainer.appendChild(headerImageContainer);
+     
+      const techList = document.createElement('ul');
+      
+      for (let j = 0; j < projects[i].tech.length; j++) {
+        const list = document.createElement('li');
+        list.innerHTML = projects[i].tech[j];
+        // list.innerHTML = '<img src="./images/Counter.svg" alt="counter"'
+        techList.appendChild(list);
+      }
+      insideContainer.appendChild(techList);
 
       const imageContainer = document.createElement('div');
-      imageContainer.className = 'popupImage';
+      imageContainer.className = 'popup-image-container';
       insideContainer.appendChild(imageContainer);
-
-
-      const closeIcon = document.createElement('button');
-      closeIcon.className = 'closeButton';
-      closeIcon.innerHTML =
-        '<button onclick="closeWindow()" id="closeButton" ><img src="images/closed-icon.png" alt="CloseIcon"/></button></button>';
-      imageContainer.appendChild(closeIcon);
 
       const img = document.createElement('img');
       img.setAttribute('src', projects[i].img);
@@ -187,18 +201,9 @@ function projectClick(event) {
       img.setAttribute('alt', 'Project image');
       imageContainer.appendChild(img);
 
-      const techList = document.createElement('ul');
-      insideContainer.appendChild(techList);
-
-      for (let j = 0; j < projects[i].tech.length; j++) {
-        const list = document.createElement('li');
-        list.innerHTML = projects[i].tech[j];
-        techList.appendChild(list);
-      }
-
       const p = document.createElement('p');
       p.innerHTML =
-        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea';
+        'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the';
       insideContainer.appendChild(p);
 
       const link = document.createElement('div');
@@ -208,13 +213,13 @@ function projectClick(event) {
       const seeLive = document.createElement('button');
       seeLive.className = 'seeLive';
       seeLive.innerHTML =
-        '<button type="button" id="btnLive" class="btn">See Live <i class="fa fa-up-right-from-square"></i></button ';
+        '<button type="button" id="btnLive" class="btn btn btn-outline-primary">See Live <i class="fa fa-up-right-from-square"></i></button ';
       link.appendChild(seeLive);
 
       const seeSource = document.createElement('button');
       seeSource.className = 'seeSource';
       seeSource.innerHTML =
-        '<button type="button" id="btnSource" class="btn">See Source <i class="fa fa-github"></i></i></button ';
+        '<button type="button" id="btnSource" class="btn btn-outline-primary">See Source <i class="fa fa-github"></i></i></button ';
       link.appendChild(seeSource);
     }
   }

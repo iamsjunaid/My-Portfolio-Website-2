@@ -261,6 +261,73 @@ main {
   color: white;
 }
 
+.popup-window {
+  background-color: pink;
+  z-index: 100;
+  opacity: 0.9;
+  /* position: fixed; */
+}
+
+.show-inner-card {
+  background-color: blue;
+  /* visibility: hidden; */
+  display: flex;
+}
+
+.popupSection {
+  font-size: 1.25rem;
+  cursor: pointer;
+  /* color: #6070ff; */
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  top: 0%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  padding: 1.5rem;
+  background-color: #c1c7d0;
+  opacity: 100;
+}
+
+.insideDiv {
+  padding: 2rem;
+}
+
+.headerImageContainer {
+  display: flex;
+}
+
+.header-toggler {
+  position: inherit;
+}
+
+.closeButton {
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+}
+
+.popup-image-container {
+  text-align: center;
+}
+
+.popupImg {
+  width: 80%;
+}
+
+.insideDiv ul {
+  display: flex;
+}
+
+.insideDiv li {
+  list-style: none;
+  font-weight: 600;
+  line-height: 16px;
+}
+
 @media (max-width: 1199.98px) {
   .header {
     /* padding: none; */
@@ -492,49 +559,5 @@ main {
   .ham-menu {
     color: #6070ff;
     font-size: 1.5rem;
-  }
-
-  .popup-window {
-    background-color: pink;
-    z-index: 100;
-    opacity: 0.9;
-    /* position: fixed; */
-  }
-
-  .show-inner-card {
-    background-color: blue;
-    /* visibility: hidden; */
-    display: flex;
-  }
-
-  .popupSection {
-    font-size: 1.25rem;
-    cursor: pointer;
-    /* color: #6070ff; */
-    justify-content: flex-start;
-    align-items: flex-start;
-    position: fixed;
-    top: 0%;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 100;
-    padding: 1.5rem;
-    background-color: #6070ff;
-    opacity: 0.9;
-  }
-
-  .header-toggler {
-    position: inherit;
-  }
-
-  .closeButton {
-    /* color: #fff;
-    font-size: 2rem;
-    cursor: pointer;
-    position: fixed; */
-  }
-  .popupImg {
-    width: 80%;
   }
 }
