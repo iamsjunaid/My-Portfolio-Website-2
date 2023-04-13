@@ -348,6 +348,7 @@ main {
   main {
     margin-top: 0;
     position: inherit;
+    background-color: #e6e6e2;
   }
 
   .headline {
