@@ -3,6 +3,7 @@ const mobileMenu = document.querySelector('.mobile-menu');
 const closeMenu = document.querySelector('.close-icon');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 const gridItem = document.querySelector('.grid__item');
+const header = document.querySelector('header');
 
 hamMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
@@ -96,8 +97,8 @@ const seeProjectBtns = document.querySelectorAll('.see-project-btn');
 const projects = [];
 
 const projectOne = {
-  id: 'projectOne',
-  img: './images/popupImage.jpg',
+  id: 0,
+  img: './images/Snapshoot-Portfolio.svg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
   description:
@@ -109,7 +110,7 @@ const projectOne = {
 projects.push(projectOne);
 
 const projectTwo = {
-  id: 'projectTwo',
+  id: 1,
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -122,7 +123,7 @@ const projectTwo = {
 projects.push(projectTwo);
 
 const projectThree = {
-  id: 'projectThree',
+  id: 2,
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -135,7 +136,7 @@ const projectThree = {
 projects.push(projectThree);
 
 const projectFour = {
-  id: 'projectFour',
+  id: 3,
   img: './images/popupImage.jpg',
   name: 'Keeping track of hundreds of components',
   tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
@@ -144,57 +145,40 @@ const projectFour = {
   demo: '',
   source: '',
 };
-
-projects.push(projectFour);
-
-const projectFive = {
-  id: 'projectFive',
-  img: './images/popupImage.jpg',
-  name: 'Keeping track of hundreds of components',
-  tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  demo: '',
-  source: '',
-};
-
-projects.push(projectFive);
-
-const projectSix = {
-  id: 'projectSix',
-  img: './images/popupImage.jpg',
-  name: 'Keeping track of hundreds of components',
-  tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
-  description:
-    'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
-  demo: '',
-  source: '',
-};
-
-projects.push(projectSix);
 
 function projectClick(event) {
   let clickedId = event.target.id;
+  header.classList.toggle('header-toggler')
 
+  console.log(projects.length)
   for (let i = 0; i < projects.length; i++) {
-    if (projects[i].id === clickedId) {
+    console.log(projects[i].id+" "+clickedId)
+    // console.log(projects[i].id)
+    if (projects[i].id == clickedId) {
+
       const body = document.querySelector('body');
       const popupSection = document.createElement('section');
       popupSection.className = 'popupSection';
       body.appendChild(popupSection);
 
       const insideContainer = document.createElement('div');
-      insideContainer.className = 'insideDiv';
+      insideContainer.className = 'insideDiv card';
       popupSection.appendChild(insideContainer);
+
+      const headerImageContainer = document.createElement('div')
+      const careersTitle = document.createElement('h3');
+      careersTitle.innerHTML = projects[i].name;
+      insideContainer.appendChild(careersTitle);
 
       const imageContainer = document.createElement('div');
       imageContainer.className = 'popupImage';
       insideContainer.appendChild(imageContainer);
 
+
       const closeIcon = document.createElement('button');
       closeIcon.className = 'closeButton';
       closeIcon.innerHTML =
-        '<button onclick="closeWindow()" id="closeButton" ><img src="images/closed-icon.png" alt="CloseIcon"/></i></button>';
+        '<button onclick="closeWindow()" id="closeButton" ><img src="images/closed-icon.png" alt="CloseIcon"/></button></button>';
       imageContainer.appendChild(closeIcon);
 
       const img = document.createElement('img');
@@ -202,10 +186,6 @@ function projectClick(event) {
       img.className = 'popupImg';
       img.setAttribute('alt', 'Project image');
       imageContainer.appendChild(img);
-
-      const careersTitle = document.createElement('h3');
-      careersTitle.innerHTML = projects[i].name;
-      insideContainer.appendChild(careersTitle);
 
       const techList = document.createElement('ul');
       insideContainer.appendChild(techList);
@@ -242,6 +222,7 @@ function projectClick(event) {
 
 function closeWindow() {
   const iconClose = document.getElementsByClassName('popupSection');
+  header.classList.toggle('header-toggler')
   iconClose[0].style.display = 'none';
   iconClose[0].remove();
 }

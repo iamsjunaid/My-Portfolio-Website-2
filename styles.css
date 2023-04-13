@@ -108,7 +108,7 @@ main {
 #card-2,
 #card-3 {
   flex-direction: row;
-  gap : 2rem;
+  gap: 2rem;
 }
 
 #card-1,
@@ -152,7 +152,7 @@ main {
   border-top-right-radius: 100px;
 }
 
-#about-section > div {
+#about-section>div {
   width: 85vw;
   margin: 0 auto;
   padding: 10em 7em;
@@ -212,7 +212,7 @@ main {
   background-position: center;
 }
 
-#contact > div {
+#contact>div {
   width: 35vw;
   margin: 0 auto;
   padding: 10em 0;
@@ -343,7 +343,7 @@ main {
     font-size: 0.925em;
   }
 
-  #portfolio-img{
+  #portfolio-img {
     width: 100%;
   }
 
@@ -358,7 +358,7 @@ main {
     flex-direction: column;
   }
 
-  #about-section > div {
+  #about-section>div {
     flex-direction: column;
     padding: 10em 2em;
     width: 100vw;
@@ -394,7 +394,7 @@ main {
     background-position: right;
   }
 
-  #contact > div {
+  #contact>div {
     width: 100%;
     padding: 10em 3em;
   }
@@ -505,5 +505,36 @@ main {
     background-color: blue;
     /* visibility: hidden; */
     display: flex;
+  }
+
+  .popupSection {
+    font-size: 1.25rem;
+    cursor: pointer;
+    /* color: #6070ff; */
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    top: 0%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    padding: 1.5rem;
+    background-color: #6070ff;
+    opacity: 0.9;
+  }
+
+  .header-toggler {
+    position: inherit;
+  }
+
+  .closeButton {
+    /* color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    position: fixed; */
+  }
+  .popupImg {
+    width: 80%;
   }
 }
