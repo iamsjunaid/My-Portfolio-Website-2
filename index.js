@@ -4,8 +4,6 @@ const closeMenu = document.querySelector('.close-icon');
 const mobileLinks = document.querySelectorAll('.mobile-link');
 const gridItem = document.querySelector('.grid__item');
 
-console.log(gridItem);
-
 hamMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
@@ -83,7 +81,7 @@ projectsDataSource.forEach((project, index) => {
             )
             .join('')}
         </div>
-        <button type="button" class="btn btn-outline-primary align-self-start see-project-btn" onclick="projectClick(event)">
+        <button type="button" id="${index}" class="btn btn-outline-primary align-self-start see-project-btn" onclick="projectClick(event)">
           See Project
         </button>
       </div>
@@ -95,7 +93,6 @@ document.getElementById('Portfolio').innerHTML = result;
 
 const seeProjectBtns = document.querySelectorAll('.see-project-btn');
 
-console.log(seeProjectBtns);
 const projects = [];
 
 const projectOne = {
@@ -177,9 +174,7 @@ const projectSix = {
 projects.push(projectSix);
 
 function projectClick(event) {
-  // const clickedId = event.target.attr('id');
-
-  console.log(event);
+  let clickedId = event.target.id;
 
   for (let i = 0; i < projects.length; i++) {
     if (projects[i].id === clickedId) {
