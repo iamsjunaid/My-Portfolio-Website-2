@@ -493,4 +493,17 @@ main {
     color: #6070ff;
     font-size: 1.5rem;
   }
+
+  .popup-window {
+    background-color: pink;
+    z-index: 100;
+    opacity: 0.9;
+    /* position: fixed; */
+  }
+
+  .show-inner-card {
+    background-color: blue;
+    /* visibility: hidden; */
+    display: flex;
+  }
 }
