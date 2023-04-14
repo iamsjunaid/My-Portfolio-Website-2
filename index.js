@@ -134,8 +134,9 @@ const projectFour = {
 };
 
 projects.push(projectFour);
-
-function projectClick(event) {
+/* eslint-disable */
+function projectClick(event) 
+{
   const clickedId = event.target.id;
   header.classList.toggle('header-toggler');
 
@@ -233,6 +234,7 @@ function projectClick(event) {
     }
   }
 }
+/* eslint-disable */
 
 function closeWindow() {
   const iconClose = document.getElementsByClassName('popupSection');
