@@ -2,7 +2,6 @@ const hamMenu = document.querySelector('.ham-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeMenu = document.querySelector('.close-icon');
 const mobileLinks = document.querySelectorAll('.mobile-link');
-const gridItem = document.querySelector('.grid__item');
 const header = document.querySelector('header');
 
 hamMenu.addEventListener('click', () => {
@@ -19,7 +18,6 @@ mobileLinks.forEach((link) => {
   });
 });
 
-//passing this data dynamically to the portfolio section
 const projectsDataSource = [
   {
     img: './images/Snapshoot-Portfolio.svg',
@@ -55,39 +53,33 @@ const projectsDataSource = [
   },
 ];
 
-let parser = new DOMParser();
+const parser = new DOMParser();
 
 let result = '';
 
 projectsDataSource.forEach((project, index) => {
-  const projectElement = parser.parseFromString(projectsDataSource, 'text/html')
-    .body.firstChild;
 
-  result += `<div class="card grid__item mb-5" >
-    <div class="inner-card d-flex p-4" id=${'card-' + index}>
-      <div class="portfolio-image-container">
-        <img id="portfolio-img"
-          src="${project.img}"
-          alt="Project Snapshot"
-        />
-      </div>
-      <div class="desc">
-        <h2 class="card-title">${project.title}</h2>
-        <p>${project.desc}</p>
-        <div class="list-inline p-1 d-flex">
-          ${project.techs
-            .map(
-              (tech) =>
-                `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`
-            )
-            .join('')}
-        </div>
-        <button type="button" id="${index}" class="btn btn-outline-primary align-self-start see-project-btn" onclick="projectClick(event)">
-          See Project
-        </button>
-      </div>
+  result += 
+  `<div class="card grid__item mb-5">
+  <div class="inner-card d-flex p-4" id=${'card-' + index}>
+    <div class="portfolio-image-container">
+      <img id="portfolio-img" src="${project.img}" alt="Project Snapshot" />
     </div>
-  </div>`;
+    <div class="desc">
+      <h2 class="card-title">${project.title}</h2>
+      <p>${project.desc}</p>
+      <div class="list-inline p-1 d-flex">
+        ${project.techs.map((tech) =>
+        `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`
+        ).join('')}
+      </div>
+      <button type="button" id="${index}" class="btn btn-outline-primary align-self-start see-project-btn"
+        onclick="projectClick(event)">
+        See Project
+      </button>
+    </div>
+  </div>
+</div>`;
 });
 
 document.getElementById('Portfolio').innerHTML = result;
