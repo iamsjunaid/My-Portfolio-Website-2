@@ -53,8 +53,6 @@ const projectsDataSource = [
   },
 ];
 
-const parser = new DOMParser();
-
 let result = '';
 
 projectsDataSource.forEach((project, index) => {
@@ -62,24 +60,21 @@ projectsDataSource.forEach((project, index) => {
   result += 
   `<div class="card grid__item mb-5">
   <div class="inner-card d-flex p-4" id=${'card-' + index}>
-    <div class="portfolio-image-container">
-      <img id="portfolio-img" src="${project.img}" alt="Project Snapshot" />
-    </div>
-    <div class="desc">
-      <h2 class="card-title">${project.title}</h2>
-      <p>${project.desc}</p>
-      <div class="list-inline p-1 d-flex">
-        ${project.techs.map((tech) =>
-        `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`
-        ).join('')}
-      </div>
-      <button type="button" id="${index}" class="btn btn-outline-primary align-self-start see-project-btn"
-        onclick="projectClick(event)">
-        See Project
-      </button>
-    </div>
+  <div class="portfolio-image-container">
+  <img id="portfolio-img" src="${project.img}" alt="Project Snapshot" />
   </div>
-</div>`;
+  <div class="desc">
+  <h2 class="card-title">${project.title}</h2>
+  <p>${project.desc}</p>
+  <div class="list-inline p-1 d-flex">
+  ${project.techs.map((tech) =>
+  `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`).join('')}
+  </div>
+  <button type="button" id="${index}" class="btn btn-outline-primary align-self-start see-project-btn"
+  onclick="projectClick(event)">See Project</button>
+  </div>
+  </div>
+  </div>`;
 });
 
 document.getElementById('Portfolio').innerHTML = result;
