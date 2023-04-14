@@ -20,7 +20,7 @@ mobileLinks.forEach((link) => {
   });
 });
 
-email.addEventListener('submit', () => {
+email.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
     e.preventDefault();
     email.setCustomValidity('Email must be in lowercase');
