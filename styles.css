@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -132,7 +134,7 @@ main {
 }
 
 .list-inline {
-  gap: 0.50em;
+  gap: 0.5em;
 }
 
 .sublist::before {
@@ -152,7 +154,7 @@ main {
   border-top-right-radius: 100px;
 }
 
-#about-section>div {
+#about-section > div {
   width: 85vw;
   margin: 0 auto;
   padding: 10em 7em;
@@ -186,6 +188,7 @@ main {
 .subitem-list {
   display: flex;
   list-style-type: none;
+
   /* gap: 2em; */
 }
 
@@ -212,7 +215,7 @@ main {
   background-position: center;
 }
 
-#contact>div {
+#contact > div {
   width: 35vw;
   margin: 0 auto;
   padding: 10em 0;
@@ -265,11 +268,13 @@ main {
   background-color: pink;
   z-index: 100;
   opacity: 0.9;
+
   /* position: fixed; */
 }
 
 .show-inner-card {
   background-color: blue;
+
   /* visibility: hidden; */
   display: flex;
 }
@@ -277,7 +282,6 @@ main {
 .popupSection {
   font-size: 1.25rem;
   cursor: pointer;
-  /* color: #6070ff; */
   justify-content: flex-start;
   align-items: flex-start;
   position: fixed;
@@ -287,12 +291,14 @@ main {
   bottom: 0;
   z-index: 100;
   padding: 1.5rem;
-  background-color: #c1c7d0;
+  background-color: rgba(0, 0, 0, 0.7);
   opacity: 100;
+  overflow-x: scroll;
 }
 
 .insideDiv {
   padding: 2rem;
+  border-radius: 2rem !important;
 }
 
 .headerImageContainer {
@@ -328,9 +334,31 @@ main {
   line-height: 16px;
 }
 
+.para-btn-container {
+  display: flex;
+}
+
+.links-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.top-popup-para {
+  height: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.counter-container {
+  margin-top: -8px;
+}
+
 @media (max-width: 1199.98px) {
   .header {
-    /* padding: none; */
     position: inherit;
   }
 
@@ -381,7 +409,7 @@ main {
   }
 
   .inner-card {
-    padding: 0px !important;
+    padding: 0 !important;
   }
 
   .card-title {
@@ -426,7 +454,7 @@ main {
     flex-direction: column;
   }
 
-  #about-section>div {
+  #about-section > div {
     flex-direction: column;
     padding: 10em 2em;
     width: 100vw;
@@ -462,7 +490,7 @@ main {
     background-position: right;
   }
 
-  #contact>div {
+  #contact > div {
     width: 100%;
     padding: 10em 3em;
   }
@@ -560,5 +588,17 @@ main {
   .ham-menu {
     color: #6070ff;
     font-size: 1.5rem;
+  }
+
+  .languages-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    float: none;
+    padding: 0;
+  }
+
+  .para-btn-container {
+    display: block;
   }
 }

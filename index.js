@@ -97,11 +97,12 @@ const seeProjectBtns = document.querySelectorAll('.see-project-btn');
 const projects = [];
 
 const projectOne = {
-  id: 0,
+  id: '0',
   img: './images/Snapshoot-Portfolio.svg',
   name: 'Tonic',
   tech: ['Codekit', 'GitHub', 'JavaScript'],
   description: 'A daily selection of privately personalized reads; no accounts or sign-ups required.',
+  languages: ['HTML','CSS','JavaScript'],
   demo: 'abc',
   source: 'def',
 };
@@ -109,12 +110,13 @@ const projectOne = {
 projects.push(projectOne);
 
 const projectTwo = {
-  id: 1,
+  id: '1',
   img: './images/Snapshoot-Portfolio2.svg',
   name: 'Multi-Post Stories',
-  tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+  tech: ['Codekit', 'GitHub', 'JavaScript'],
   description:
     'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends.',
+  languages: ['HTML','CSS','JavaScript'],
   demo: 'abc',
   source: 'def',
 
@@ -123,12 +125,13 @@ const projectTwo = {
 projects.push(projectTwo);
 
 const projectThree = {
-  id: 2,
+  id: '2',
   img: './images/Snapshoot-Portfolio3.svg',
-  name: 'Keeping track of hundreds of components',
-  tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+  name: 'Facebook 360',
+  tech: ['Codekit', 'GitHub', 'JavaScript'],
   description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the releaLorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry`s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea',
+  languages: ['HTML','CSS','JavaScript'],
   demo: 'abc',
   source: 'def',
 };
@@ -136,27 +139,29 @@ const projectThree = {
 projects.push(projectThree);
 
 const projectFour = {
-  id: 3,
+  id: '3',
   img: './images/Snapshoot-Portfolio4.svg',
   name: 'Uber Navigation',
-  tech: ['Codekit', 'GitHub', 'JavaScript', 'Bootstrap', 'Terminal', 'Codepen'],
+  tech: ['Codekit', 'GitHub', 'JavaScript'],
   description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  languages: ['HTML','CSS','JavaScript'],
   demo: 'abc',
   source: 'def',
 };
+
+projects.push(projectFour);
 
 function projectClick(event) {
   let clickedId = event.target.id;
   // console.log(clickedId)
   header.classList.toggle('header-toggler')
 
-  console.log(projects.length)
+  // console.log(projects.length)
   for (let i = 0; i < projects.length; i++) {
-    console.log(i)
-    console.log(clickedId)
+    console.log(projects[i].id)
+  // console.log(i+" "+projects.length);
     if (projects[i].id == clickedId) {
-
       const body = document.querySelector('body');
       const popupSection = document.createElement('section');
       popupSection.className = 'popupSection';
@@ -180,13 +185,22 @@ function projectClick(event) {
       headerImageContainer.append(closeButton);
       
       insideContainer.appendChild(headerImageContainer);
-     
-      const techList = document.createElement('ul');
       
+      const techList = document.createElement('div');
+      techList.className = 'list-inline p-1 d-flex'
+
       for (let j = 0; j < projects[i].tech.length; j++) {
-        const list = document.createElement('li');
+        const list = document.createElement('p');
+        list.className = 'top-popup-para';
         list.innerHTML = projects[i].tech[j];
-        // list.innerHTML = '<img src="./images/Counter.svg" alt="counter"'
+        let k=0;
+        const counterContainer = document.createElement('div');
+        while(k<j){
+          counterContainer.className = 'counter-container'
+          counterContainer.innerHTML  = '<img src="./images/Counter.svg" alt="counter">'
+          k++;
+        }
+        techList.appendChild(counterContainer);
         techList.appendChild(list);
       }
       insideContainer.appendChild(techList);
@@ -201,22 +215,41 @@ function projectClick(event) {
       img.setAttribute('alt', 'Project image');
       imageContainer.appendChild(img);
 
+      const paraBtnContainer = document.createElement('div');
+      paraBtnContainer.className = 'para-btn-container';
+
       const p = document.createElement('p');
       p.innerHTML =
         'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the';
-      insideContainer.appendChild(p);
+      paraBtnContainer.appendChild(p);
+      insideContainer.appendChild(paraBtnContainer)
+
+      const badgeBtnContainer = document.createElement('div');
+      badgeBtnContainer.className = 'badge-btn-container'
+
+      const langs = document.createElement('div');
+      langs.className = 'list-inline p-1 d-flex mb-5';
+      for (let j = 0; j < projects[i].languages.length; j++) {
+        const list = document.createElement('span');
+        list.className = 'badge p-2 text-primary fw-normal'
+        list.innerHTML = projects[i].languages[j];
+        langs.appendChild(list);
+      }
+      badgeBtnContainer.appendChild(langs);
+      paraBtnContainer.appendChild(badgeBtnContainer);
 
       const link = document.createElement('div');
-      link.className = 'link';
-      insideContainer.appendChild(link);
+      link.className = 'links-container';
+      badgeBtnContainer.appendChild(link);
+      paraBtnContainer.appendChild(badgeBtnContainer);
 
-      const seeLive = document.createElement('button');
+      const seeLive = document.createElement('div');
       seeLive.className = 'seeLive';
       seeLive.innerHTML =
         '<button type="button" id="btnLive" class="btn btn btn-outline-primary">See Live <i class="fa fa-up-right-from-square"></i></button ';
       link.appendChild(seeLive);
 
-      const seeSource = document.createElement('button');
+      const seeSource = document.createElement('div');
       seeSource.className = 'seeSource';
       seeSource.innerHTML =
         '<button type="button" id="btnSource" class="btn btn-outline-primary">See Source <i class="fa fa-github"></i></i></button ';
