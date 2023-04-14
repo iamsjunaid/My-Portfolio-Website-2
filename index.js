@@ -2,9 +2,15 @@ const hamMenu = document.querySelector('.ham-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
 const closeMenu = document.querySelector('.close-icon');
 const mobileLinks = document.querySelectorAll('.mobile-link');
+const nameContent = document.querySelector('.name');
 const email = document.querySelector('.email');
+const comments = document.querySelector('.comments');
 const form = document.querySelector('.form-1');
 const errorContainer = document.createElement('div');
+const validationContainer = document.createElement('div');
+validationContainer.className = 'validation-container';
+
+const submitBtn = document.querySelector('.submit-btn');
 
 hamMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
@@ -37,3 +43,17 @@ email.addEventListener('submit', (e) => {
 email.addEventListener('input', () => {
   email.setCustomValidity('');
 });
+
+function validateForm() {
+   let name =  document.getElementsByClassName('fname');
+   let email =  document.getElementsByClassName('femail');
+   let comment =  document.getElementsByClassName('fcomment');
+    
+  console.log(name+""+email+""+comment);
+  if (name.value == null || email.value == null || comment == null) {
+    alert("All the fields must be filled out");
+    return false;
+  }
+}
+
+

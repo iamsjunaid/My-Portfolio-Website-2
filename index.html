@@ -443,6 +443,8 @@
                 class="form-1"
                 action="https://formspree.io/f/xayzpwoo"
                 method="POST"
+                name="myForm"
+                onsubmit="return validateForm()"
               >
                 <label for="text" class="form-label" hidden>Name</label>
                 <input
@@ -450,11 +452,12 @@
                   id="text"
                   placeholder="Enter your name"
                   maxlength="30"
-                  class="form-control mb-4"
+                  class="fname form-control mb-4"
+                  name="fname"
                 />
                 <label for="email" class="form-label" hidden>Email</label>
                 <input
-
+                  name="femail"
                   type="email"
                   id="email"
                   placeholder="Enter you email"
@@ -463,15 +466,16 @@
                 />
                 <label for="comment" class="form-label" hidden>Comment</label>
                 <textarea
-                  name="comment"
+                  name="fcomment"
                   id="comment"
                   maxlength="500"
-                  class="mb-4 form-control"
+                  class="comments mb-4 form-control"
                   placeholder="Enter your comment"
+                  required
                 ></textarea>
                 <button
                   type="submit"
-                  class="btn btn-outline-primary"
+                  class="btn btn-outline-primary submit-btn"
                   id="button"
                 >
                   Get in touch

@@ -262,6 +262,13 @@ main {
   border-radius: 8px;
 }
 
+.validation-container {
+  background-color: red;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
 @media (max-width: 1199.98px) {
   .header {
     /* padding: 0 2em; */
