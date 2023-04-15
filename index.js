@@ -132,10 +132,10 @@ const popUpCard = (dataSource) => {
     .join('')}
   </div>
   <div class="popup-btn-container">
-  <button type="button" class="btn btn-outline-primary align-self-start see-project-btn"
-  >See Live</button>
-  <button type="button" class="btn btn-outline-primary align-self-start see-project-btn"
-  >See Source</button>
+  <button type="button" id="popup-btn-1" class="btn btn-outline-primary align-self-start see-project-btn"
+  >See Live<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+  <button type="button" id="popup-btn-2" class="btn btn-outline-primary align-self-start see-project-btn"
+  >See Source<i class="fa-brands fa-github"></i></button>
   </div>
   </div>
   </div>

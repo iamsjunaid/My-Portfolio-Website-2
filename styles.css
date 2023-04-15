@@ -290,7 +290,7 @@ main {
   bottom: 0;
   z-index: 100;
   padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.4);
   opacity: 100;
   overflow-x: scroll;
 }
@@ -396,10 +396,18 @@ main {
   gap: 1rem;
 }
 
+.tags-btn-container {
+  width: 34%;
+}
+
 #list-item-1 {
   margin-left: -2rem;
   color: #344563;
   font-weight: 500;
+}
+
+#portfolio-img {
+  width: 100%;
 }
 
 @media (max-width: 1199.98px) {
@@ -476,10 +484,6 @@ main {
 
   .card-text {
     font-size: 0.925em;
-  }
-
-  #portfolio-img {
-    width: 100%;
   }
 
   #card-0,
@@ -567,6 +571,10 @@ main {
   .ham-menu {
     display: none;
   }
+
+  .tags-btn-container {
+    width: 52%;
+  }
 }
 
 @media screen and (max-width: 991.98px) {
@@ -649,4 +657,12 @@ main {
   .desc-tag-btn-container {
     flex-direction: column;
   }
+
+  .tags-btn-container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  
 }
