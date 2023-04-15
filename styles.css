@@ -33,10 +33,11 @@ header {
 }
 
 main {
-  position: absolute;
   width: 100%;
-  margin-top: 5.5em;
   overflow: hidden;
+  margin-top: 0;
+  position: inherit;
+  background-color: #e6e6e2;
 }
 
 .headline {
@@ -268,8 +269,6 @@ main {
   background-color: pink;
   z-index: 100;
   opacity: 0.9;
-
-  /* position: fixed; */
 }
 
 .show-inner-card {
@@ -282,8 +281,8 @@ main {
 .popupSection {
   font-size: 1.25rem;
   cursor: pointer;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   top: 0%;
   left: 0;
@@ -299,6 +298,10 @@ main {
 .insideDiv {
   padding: 2rem;
   border-radius: 2rem !important;
+}
+
+.title-btn-container {
+  display: flex;
 }
 
 .headerImageContainer {
@@ -344,7 +347,7 @@ main {
   justify-content: center;
 }
 
-.top-popup-para {
+.designations {
   height: 20px;
   font-family: 'Poppins', sans-serif;
   font-style: normal;
@@ -353,28 +356,50 @@ main {
   line-height: 20px;
 }
 
-.counter-container {
-  margin-top: -8px;
-}
-
-.popup-card {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  padding: 1.5rem;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 100;
-  overflow-x: scroll;
-  width: 100%;
-  display: flex;
-  align-items: center;
+.counter {
+  width: 0.5rem;
+  margin-top: -0.5rem;
 }
 
 .inner-card {
   background-color: #fff;
+  width: 80%;
+  margin: auto;
+}
+
+.portfolio-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.data-container-1 {
+  flex-direction: column;
+}
+
+.list-items-container {
+  list-style: none;
+  display: flex;
+}
+
+.list-item {
+  margin: 0 10px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: 'Poppins', Courier, monospace;
+  color: #6b778c;
+}
+
+.popup-btn-container {
+  display: flex;
+  gap: 1rem;
+}
+
+#list-item-1 {
+  margin-left: -2rem;
+  color: #344563;
+  font-weight: 500;
 }
 
 @media (max-width: 1199.98px) {
@@ -391,12 +416,6 @@ main {
 
   #navbar-menu {
     display: none;
-  }
-
-  main {
-    margin-top: 0;
-    position: inherit;
-    background-color: #e6e6e2;
   }
 
   .headline {
@@ -620,5 +639,14 @@ main {
 
   .para-btn-container {
     display: block;
+  }
+
+  .popup-btn-container {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .desc-tag-btn-container {
+    flex-direction: column;
   }
 }
