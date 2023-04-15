@@ -357,6 +357,26 @@ main {
   margin-top: -8px;
 }
 
+.popup-card {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 100;
+  overflow-x: scroll;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.inner-card {
+  background-color: #fff;
+}
+
 @media (max-width: 1199.98px) {
   .header {
     position: inherit;
@@ -415,26 +435,6 @@ main {
   .card-title {
     font-weight: 700;
     font-size: 2rem;
-  }
-
-  .popup-card {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1000;
-    padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 100;
-    overflow-x: scroll;
-    width: 100%;
-    display: flex;
-    align-items: center;
-  }
-
-  .inner-card {
-    background-color: #fff;
   }
 
   .mainlist {
