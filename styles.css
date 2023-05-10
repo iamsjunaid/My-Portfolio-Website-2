@@ -265,6 +265,7 @@ main {
   color: white;
 }
 
+
 .popup-window {
   background-color: pink;
   z-index: 100;
@@ -408,6 +409,20 @@ main {
 
 #portfolio-img {
   width: 100%;
+=======
+.error-container {
+  background-color: red;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.validation-container {
+  background-color: red;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+
 }
 
 @media (max-width: 1199.98px) {

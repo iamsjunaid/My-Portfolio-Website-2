@@ -159,6 +159,7 @@
               </div>
               <a href="#" class="btn btn-outline-primary align-self-start">Get my Resume</a>
             </div>
+
             <div class="about-content-right d-flex flex-column">
               <ul class="list-group list-group-flush">
                 <li class="list-group-item d-flex border-0 flex-column justify-content-between mb-3 item">
@@ -188,6 +189,62 @@
                   Skills <i class="fa-solid fa-angle-right next arrow"></i>
                 </li>
               </ul>
+
+          </section>
+          <section id="contact">
+            <div
+              class="d-flex flex-column justify-content-center text-center align-items-center"
+              id="about-content"
+            >
+              <h2 class="contact-title">Contact me</h2>
+              <p class="contact-subtitle mb-5">
+                Contact me If you have an application you are interested in
+                developing, a feature that you need built or a project that
+                needs coding. I’d love to help with it!
+              </p>
+              <form
+                class="form-1"
+                action="https://formspree.io/f/xayzpwoo"
+                method="POST"
+                name="myForm"
+                onsubmit="return validateForm()"
+              >
+                <label for="text" class="form-label" hidden>Name</label>
+                <input
+                  type="text"
+                  id="text"
+                  placeholder="Enter your name"
+                  maxlength="30"
+                  class="fname form-control mb-4"
+                  name="fname"
+                />
+                <label for="email" class="form-label" hidden>Email</label>
+                <input
+                  name="femail"
+                  type="email"
+                  id="email"
+                  placeholder="Enter you email"
+                  class="email form-control mb-4"
+                  required
+                />
+                <label for="comment" class="form-label" hidden>Comment</label>
+                <textarea
+                  name="fcomment"
+                  id="comment"
+                  maxlength="500"
+                  class="comments mb-4 form-control"
+                  placeholder="Enter your comment"
+                  required
+                ></textarea>
+                <button
+                  type="submit"
+                  class="btn btn-outline-primary submit-btn"
+                  id="button"
+                >
+                  Get in touch
+                </button>
+              </form>
+
             </div>
           </div>
         </section>

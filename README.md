@@ -22,9 +22,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 My Portfolio Website 2 <a name="about-project"></a>
+# 📖 My Portfolio Website <a name="about-project"></a>
 
-**My-Portfolio-Website** build by using 'mobile first' approach to understand how to parse a Figma design to create a UI by using Flexbox and images.
+**My-Portfolio-Website** is build by using 'mobile first' approach to showcase my skills, previous work and my experiences.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -53,7 +53,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link]()
+- [Live Demo Link](https://iamsjunaid.github.io/My-Portfolio-Website-2/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
