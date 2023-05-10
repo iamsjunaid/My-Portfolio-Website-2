@@ -11,7 +11,6 @@ const errorContainer = document.createElement('div');
 const validationContainer = document.createElement('div');
 validationContainer.className = 'validation-container';
 
-
 hamMenu.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
@@ -25,7 +24,6 @@ mobileLinks.forEach((link) => {
     mobileMenu.classList.toggle('active');
   });
 });
-
 
 const projectsDataSource = [
   {
