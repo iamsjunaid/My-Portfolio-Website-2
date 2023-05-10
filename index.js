@@ -28,15 +28,15 @@ mobileLinks.forEach((link) => {
 const projectsDataSource = [
   {
     id: '0',
-    img: './images/Snapshoot-Portfolio.svg',
-    company: 'Canopy',
-    designation: 'Backend Dev',
-    year: '2015',
-    title: 'Tonic',
-    desc: 'A daily selection of privately personalized reads; no accounts or sign-ups required. ',
-    techs: ['HTML', 'CSS', 'JavaScript'],
-    live: 'abc',
-    source: 'xyz',
+    img: './images/project1.png',
+    company: 'Microverse',
+    designation: 'Full stack Dev',
+    year: '2023',
+    title: 'Todo List',
+    desc: 'A website that lets you store your tasks. It uses browser\'s localstorage to perform CRUD operations.',
+    techs: ['HTML', 'CSS', 'JavaScript-ES6'],
+    live: 'https://iamsjunaid.github.io/todo-list/dist/',
+    source: 'https://github.com/iamsjunaid/todo-list',
   },
   {
     id: '1',
@@ -166,13 +166,6 @@ buttons.forEach((button) => {
     document.body.appendChild(popup);
   });
 });
-
-// function closeWindow() {
-//   const iconClose = document.getElementsByClassName('popupSection');
-//   header.classList.toggle('header-toggler');
-//   // iconClose[0].style.display = 'none';
-//   iconClose[0].remove();
-// }
 
 email.addEventListener('submit', (e) => {
   if (email.value !== email.value.toLowerCase()) {
