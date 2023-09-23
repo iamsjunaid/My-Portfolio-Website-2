@@ -40,15 +40,15 @@ const projectsDataSource = [
   },
   {
     id: '1',
-    img: './images/Snapshoot-Portfolio2.svg',
-    company: 'Facebook',
+    img: './images/space-travellers-hub/1.jpeg',
+    company: 'Microverse',
     designation: 'Fullstack',
-    year: '2015',
-    title: 'Multi-Post Stories',
-    desc: 'Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends. ',
+    year: '2023',
+    title: 'Space Travellers Hub',
+    desc: 'Space Travelers Hub In this project, We have worked with real live data from the SpaceX API. We have built a web application that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends. ',
     techs: ['HTML', 'CSS', 'JavaScript'],
-    live: 'abc',
-    source: 'xyz',
+    live: 'https://space-travelers-hub-dhiu.onrender.com/',
+    source: 'https://github.com/iamsjunaid/space-travelers-hub',
   },
   {
     id: '2',
@@ -111,42 +111,55 @@ const popUpCard = (dataSource) => {
   const popUp = document.createElement('div');
   popUp.classList.add('popupSection');
   popUp.innerHTML = `
-  <div class="inner-card card p-4" id=${`card-${dataSource.index}`}>
-  <div class="title-btn-container"><h2 class="card-title">${
-  dataSource.title
-}</h2><div class="close-icon-popup closeButton"><i class="fa-sharp fa-solid fa-xmark"></i></div></div>
-  <div class="list-inline p-1 d-flex data-container-1">
-  <div class="company-details">
-  <ul class="list-items-container">
-  <li class="list-item" id="list-item-1">${dataSource.company}</li>
-  <li>${counter}</li>
-  <li class="list-item">${dataSource.designation}</li>
-  <li>${counter}</li>
-  <li class="list-item">${dataSource.year}</li>
-  </ul>
-  </div>
-  <div class="portfolio-image-container">
-  <img id="portfolio-img" src="${dataSource.img}" alt="Project Snapshot" />
-  </div>
-  <div class="desc-tag-btn-container d-flex">
-  <p>${dataSource.desc}</p>
-  <div class="tags-btn-container">
-  <div class="list-inline p-1 d-flex">
-  ${dataSource.techs
-    .map(
-      (tech) => `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`,
-    )
-    .join('')}
-  </div>
-  <div class="popup-btn-container">
-  <button type="button" id="popup-btn-1" class="btn btn-outline-primary align-self-start see-project-btn"
-  >See Live<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
-  <button type="button" id="popup-btn-2" class="btn btn-outline-primary align-self-start see-project-btn"
-  >See Source<i class="fa-brands fa-github"></i></button>
-  </div>
-  </div>
-  </div>
-  </div>
+    <div class="inner-card card p-4" id=${`card-${dataSource.index}`}>
+      <div class="title-btn-container">
+        <h2 class="card-title">${dataSource.title}</h2>
+        <div class="close-icon-popup closeButton">
+          <i class="fa-sharp fa-solid fa-xmark"></i>
+        </div>
+      </div>
+      <div class="list-inline p-1 d-flex data-container-1">
+        <div class="company-details">
+          <ul class="list-items-container">
+            <li class="list-item" id="list-item-1">${dataSource.company}</li>
+            <li>${counter}</li>
+            <li class="list-item">${dataSource.designation}</li>
+            <li>${counter}</li>
+            <li class="list-item">${dataSource.year}</li>
+          </ul>
+        </div>
+        <div class="portfolio-image-container">
+          <img id="portfolio-img" src="${dataSource.img}" alt="Project Snapshot" />
+        </div>
+        <div class="desc-tag-btn-container d-flex">
+          <p>${dataSource.desc}</p>
+          <div class="tags-btn-container">
+            <div class="list-inline p-1 d-flex">
+              ${dataSource.techs
+                .map(
+                  (tech) =>
+                    `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`
+                )
+                .join('')}
+            </div>
+            <div class="popup-btn-container">
+            <a href="${dataSource.live}" target="_blank" rel="noopener noreferrer">
+              <button type="button" id="popup-btn-1" class="btn btn-outline-primary align-self-start see-project-btn" ${dataSource.live}>
+                See Live
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </button>
+            </a>
+            <a href="${dataSource.source}" target="_blank" rel="noopener noreferrer">
+              <button type="button" id="popup-btn-2" class="btn btn-outline-primary align-self-start see-project-btn">
+                See Source
+                <i class="fa-brands fa-github"></i>
+              </button>
+            </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   `;
 
   const closeButton = popUp.querySelector('.closeButton');
@@ -165,6 +178,20 @@ buttons.forEach((button) => {
     const popup = popUpCard(data);
     document.body.appendChild(popup);
   });
+});
+
+email.addEventListener('submit', (e) => {
+  if (email.value !== email.value.toLowerCase()) {
+    e.preventDefault();
+    email.setCustomValidity('Email must be in lowercase');
+    form.appendChild(errorContainer);
+    errorContainer.textContent = 'Email must be in lowercase';
+    errorContainer.style.color = '#fff';
+    errorContainer.style.fontSize = '0.8rem';
+    errorContainer.style.padding = '1rem';
+    errorContainer.style.backgroundColor = 'red';
+    errorContainer.style.borderRadius = '0.5rem';
+  }
 });
 
 email.addEventListener('submit', (e) => {
