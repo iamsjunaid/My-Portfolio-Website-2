@@ -109,7 +109,8 @@ main {
 #card-0,
 #card-1,
 #card-2,
-#card-3 {
+#card-3,
+#card-4 {
   flex-direction: row;
   gap: 2rem;
 }
@@ -407,7 +408,8 @@ main {
 }
 
 #portfolio-img {
-  width: 100%;
+  width: 10em;
+  height: 14em;
 }
 
 .error-container {
@@ -422,6 +424,10 @@ main {
   color: #fff;
   padding: 1rem;
   border-radius: 8px;
+}
+
+.tech-tags {
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1199.98px) {
@@ -503,7 +509,8 @@ main {
   #card-0,
   #card-1,
   #card-2,
-  #card-3 {
+  #card-3,
+  #card-4 {
     flex-direction: column;
   }
 

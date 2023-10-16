@@ -28,52 +28,63 @@ mobileLinks.forEach((link) => {
 const projectsDataSource = [
   {
     id: '0',
-    img: './images/project1.png',
+    img: './images/project-snapshots/mealsdb.jpg',
     company: 'Microverse',
-    designation: 'Full stack Dev',
+    designation: 'Front End Developer',
     year: '2023',
-    title: 'Todo List',
-    desc: 'A website that lets you store your tasks. It uses browser\'s localstorage to perform CRUD operations.',
+    title: 'Meals DB',
+    desc: 'MealsDB is an application that uses an external API mealsDB to fetch and store the data from. The project contains meals that a user can like, comment and reserve.',
     techs: ['HTML', 'CSS', 'JavaScript-ES6'],
-    live: 'https://iamsjunaid.github.io/todo-list/dist/',
-    source: 'https://github.com/iamsjunaid/todo-list',
+    live: 'https://iamsjunaid.github.io/MealsDB',
+    source: 'https://github.com/iamsjunaid/MealsDB',
   },
   {
     id: '1',
-    img: './images/space-travellers-hub/1.jpeg',
+    img: './images/project-snapshots/space-travellers-hub.jpg',
     company: 'Microverse',
-    designation: 'Fullstack',
+    designation: 'Front-end developer',
     year: '2023',
     title: 'Space Travellers Hub',
     desc: 'Space Travelers Hub In this project, We have worked with real live data from the SpaceX API. We have built a web application that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.Experimental content creation feature that allows users to add to an existing story over the course of a day without spamming their friends. ',
-    techs: ['HTML', 'CSS', 'JavaScript'],
+    techs: ['ReactJS', 'Redux', 'React Testing Library'],
     live: 'https://space-travelers-hub-dhiu.onrender.com/',
     source: 'https://github.com/iamsjunaid/space-travelers-hub',
   },
   {
     id: '2',
-    img: './images/Snapshoot-Portfolio3.svg',
-    company: 'Facebook',
-    designation: 'Fullstack',
-    year: '2015',
-    title: 'Facebook 360',
-    desc: "Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and videos on Gear VR. ",
-    techs: ['HTML', 'CSS', 'JavaScript'],
-    live: 'abc',
-    source: 'xyz',
+    img: './images/project-snapshots/nations-facts.jpg',
+    company: 'Microverse',
+    designation: 'Front-end developer',
+    year: '2023',
+    title: 'Nations Facts',
+    desc: 'Nations Facts In this project, I have worked on an external API showing various countries and their statistical data. It consists of a homepage that shows a list of the nations. When clicked on a country, it shows the details of the selected country.',
+    techs: ['ReactJS', 'Redux', 'React Testing Library'],
+    live: 'https://nations-facts.onrender.com/',
+    source: 'https://github.com/iamsjunaid/nations-facts',
   },
   {
     id: '3',
-    img: './images/Snapshoot-Portfolio4.svg',
-    company: 'Uber',
-    designation: 'Lead Dev',
-    year: '2018',
-    designations: ['Uber', 'Lead Dev', '2018'],
-    title: 'Uber Navigation',
-    desc: 'A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.',
-    techs: ['HTML', 'CSS', 'JavaScript'],
-    live: 'abc',
-    source: 'xyz',
+    img: './images/project-snapshots/budget-bee.png',
+    company: 'Microverse',
+    designation: 'Back-end developer',
+    year: '2023',
+    title: 'Budget Bee',
+    desc: 'budget bee is a mobile web application where you can manage your budget; you have a list of transactions associated with a category, so that you can see how much money you spent and on what.',
+    techs: ['Ruby on Rails', 'Tailwind CSS', 'PostgreSQL', 'Rspec'],
+    live: 'https://budget-bee.onrender.com/',
+    source: 'https://github.com/iamsjunaid/budget-bee',
+  },
+  {
+    id: '4',
+    img: './images/project-snapshots/doctalk.jpg',
+    company: 'Microverse',
+    designation: 'Full-stack developer',
+    year: '2023',
+    title: 'Doc Talk',
+    desc: 'DocTalk is your trusted health companion, bringing the power of informed conversations to your fingertips. We believe that clear and open communication is the key to better healthcare decisions, and that&apos;s what Doctalk is all about.',
+    techs: ['Ruby on Rails', 'PostgreSQL', 'ReactJS', 'Tailwind CSS', 'Redux'],
+    live: 'https://doc-talk2.onrender.com/',
+    source: 'https://github.com/iamsjunaid/DocTalk-Frontend',
   },
 ];
 
@@ -87,10 +98,10 @@ projectsDataSource.forEach((project, index) => {
   <div class="desc">
   <h2 class="card-title">${project.title}</h2>
   <p>${project.desc}</p>
-  <div class="list-inline p-1 d-flex">
+  <div class="list-inline p-1 d-flex tech-tags">
   ${project.techs
     .map(
-      (tech) => `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`,
+      (tech) => `<span class="badge p-2 text-primary fw-normal">${tech}</span>`,
     )
     .join('')}
   </div>
@@ -134,13 +145,12 @@ const popUpCard = (dataSource) => {
         <div class="desc-tag-btn-container d-flex">
           <p>${dataSource.desc}</p>
           <div class="tags-btn-container">
-            <div class="list-inline p-1 d-flex">
+            <div class="tech-tags list-inline p-1 d-flex">
               ${dataSource.techs
-                .map(
-                  (tech) =>
-                    `<span class="badge p-2 text-primary mb-5 fw-normal">${tech}</span>`
-                )
-                .join('')}
+    .map(
+      (tech) => `<span class="badge p-2 text-primary fw-normal">${tech}</span>`,
+    )
+    .join('')}
             </div>
             <div class="popup-btn-container">
             <a href="${dataSource.live}" target="_blank" rel="noopener noreferrer">
