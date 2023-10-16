@@ -82,7 +82,7 @@ const projectsDataSource = [
     year: '2023',
     title: 'Doc Talk',
     desc: 'DocTalk is your trusted health companion, bringing the power of informed conversations to your fingertips. We believe that clear and open communication is the key to better healthcare decisions, and that&apos;s what Doctalk is all about.',
-    techs: ['Ruby on Rails', 'PostgreSQL','RSpec', 'ReactJS', 'Tailwind CSS', 'Redux', 'React Testing Library'],
+    techs: ['Ruby on Rails', 'PostgreSQL', 'RSpec', 'ReactJS', 'Tailwind CSS', 'Redux', 'React Testing Library'],
     live: 'https://doc-talk2.onrender.com/',
     source: 'https://github.com/iamsjunaid/DocTalk-Frontend',
   },
