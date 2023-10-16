@@ -80,7 +80,7 @@ const projectsDataSource = [
     company: 'Microverse',
     designation: 'Full-stack developer',
     year: '2023',
-    title: 'Doc-Talk',
+    title: 'Doc Talk',
     desc: 'DocTalk is your trusted health companion, bringing the power of informed conversations to your fingertips. We believe that clear and open communication is the key to better healthcare decisions, and that&apos;s what Doctalk is all about.',
     techs: ['Ruby on Rails', 'PostgreSQL', 'ReactJS', 'Tailwind CSS', 'Redux'],
     live: 'https://doc-talk2.onrender.com/',
