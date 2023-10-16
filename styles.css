@@ -110,7 +110,7 @@ main {
 #card-1,
 #card-2,
 #card-3,
-#card-4{
+#card-4 {
   flex-direction: row;
   gap: 2rem;
 }
@@ -427,7 +427,7 @@ main {
 }
 
 .tech-tags {
- flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 @media (max-width: 1199.98px) {

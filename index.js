@@ -57,7 +57,7 @@ const projectsDataSource = [
     designation: 'Front-end developer',
     year: '2023',
     title: 'Nations Facts',
-    desc: "Nations Facts In this project, I have worked on an external API showing various countries and their statistical data. It consists of a homepage that shows a list of the nations. When clicked on a country, it shows the details of the selected country.",
+    desc: 'Nations Facts In this project, I have worked on an external API showing various countries and their statistical data. It consists of a homepage that shows a list of the nations. When clicked on a country, it shows the details of the selected country.',
     techs: ['ReactJS', 'Redux', 'React Testing Library'],
     live: 'https://nations-facts.onrender.com/',
     source: 'https://github.com/iamsjunaid/nations-facts',
@@ -147,11 +147,10 @@ const popUpCard = (dataSource) => {
           <div class="tags-btn-container">
             <div class="tech-tags list-inline p-1 d-flex">
               ${dataSource.techs
-                .map(
-                  (tech) =>
-                    `<span class="badge p-2 text-primary fw-normal">${tech}</span>`
-                )
-                .join('')}
+    .map(
+      (tech) => `<span class="badge p-2 text-primary fw-normal">${tech}</span>`,
+    )
+    .join('')}
             </div>
             <div class="popup-btn-container">
             <a href="${dataSource.live}" target="_blank" rel="noopener noreferrer">
