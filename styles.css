@@ -23,6 +23,10 @@ header {
   font-size: 1.125em;
 }
 
+.logo:hover {
+  text-decoration: underline;
+}
+
 .menu {
   font-size: 0.9375em;
 }
@@ -78,6 +82,11 @@ main {
   color: #505f79;
   padding-right: 1.25em;
   font-weight: 500;
+  transition: transform ease-in-out;
+}
+
+.icon:hover {
+  transform: scale(1.1);
 }
 
 .project-section {
@@ -190,8 +199,6 @@ main {
 .subitem-list {
   display: flex;
   list-style-type: none;
-
-  /* gap: 2em; */
 }
 
 .subitem-list li {
@@ -206,6 +213,14 @@ main {
 
 .subitem-list img {
   width: 3em;
+}
+
+.toggle-list-btn {
+  cursor: pointer;
+}
+
+.subitem-list-active {
+  display: none;
 }
 
 #contact {
@@ -407,9 +422,14 @@ main {
   font-weight: 500;
 }
 
-#portfolio-img {
+.project-img {
   width: 10em;
   height: 14em;
+  transition: transform ease-in-out 0.3s;
+}
+
+.project-img:hover {
+  transform: scale(1.1);
 }
 
 .error-container {
@@ -428,6 +448,26 @@ main {
 
 .tech-tags {
   flex-wrap: wrap;
+}
+
+.fa-twitter:hover {
+  color: skyblue;
+}
+
+.fa-linkedin-in:hover {
+  color: #0a66c2;
+}
+
+.fa-m:hover {
+  color: #ea4335;
+}
+
+.fa-github:hover {
+  color: rgb(5, 5, 5);
+}
+
+.fa-angellist:hover {
+  color: #2f3741;
 }
 
 @media (max-width: 1199.98px) {
