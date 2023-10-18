@@ -9,6 +9,8 @@ const email = document.querySelector('.email');
 const form = document.querySelector('.form-1');
 const errorContainer = document.createElement('div');
 const validationContainer = document.createElement('div');
+const toggleListBtn = document.querySelectorAll('.toggle-list-btn');
+
 validationContainer.className = 'validation-container';
 
 hamMenu.addEventListener('click', () => {
@@ -93,7 +95,7 @@ projectsDataSource.forEach((project, index) => {
   result += `<div class="card grid__item mb-5">
   <div class="inner-card d-flex p-4" id=${`card-${index}`}>
   <div class="portfolio-image-container">
-  <img id="portfolio-img" src="${project.img}" alt="Project Snapshot" />
+  <img id="portfolio-img" class="project-img"src="${project.img}" alt="Project Snapshot" />
   </div>
   <div class="desc">
   <h2 class="card-title">${project.title}</h2>
@@ -222,18 +224,16 @@ email.addEventListener('input', () => {
   email.setCustomValidity('');
 });
 
-/* eslint-disable */
-function validateForm() {
-  const name = document.getElementsByClassName('fname');
-  const email = document.getElementsByClassName('femail');
-  const comment = document.getElementsByClassName('fcomment');
-
-  console.log(`${name}${email}${comment}`);
-  if (name.value == null || email.value == null || comment == null) {
-    alert('All the fields must be filled out');
-    return false;
-  }
-  return true;
-}
-/* eslint-disable */
-
+toggleListBtn.forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const list = btn.parentElement.parentElement.querySelector('.subitem-list');
+    list.classList.toggle('subitem-list-active');
+    if (btn.classList.contains('fa-angle-right')) {
+      btn.classList.remove('fa-angle-right');
+      btn.classList.add('fa-angle-down');
+    } else {
+      btn.classList.remove('fa-angle-down');
+      btn.classList.add('fa-angle-right');
+    }
+  });
+});
